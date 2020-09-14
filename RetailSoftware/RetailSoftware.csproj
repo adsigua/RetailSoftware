@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C66CBC7-5A3D-4801-9831-8B7B0647FBA2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RetailSoftware</RootNamespace>
+    <AssemblyName>RetailSoftware</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.14.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountsSubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsSubMenuForm.Designer.cs">
+      <DependentUpon>AccountsSubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlHandler.cs" />
+    <Compile Include="ExitSubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitSubMenuForm.Designer.cs">
+      <DependentUpon>ExitSubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconHolder.cs" />
+    <Compile Include="InventorySubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventorySubMenuForm.Designer.cs">
+      <DependentUpon>InventorySubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSalesForm.Designer.cs">
+      <DependentUpon>PointOfSalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurhcaseSubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurhcaseSubMenuForm.Designer.cs">
+      <DependentUpon>PurhcaseSubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsSubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsSubMenuForm.Designer.cs">
+      <DependentUpon>ReportsSubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesSubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesSubMenuForm.Designer.cs">
+      <DependentUpon>SalesSubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubMenu.cs" />
+    <EmbeddedResource Include="AccountsSubMenuForm.resx">
+      <DependentUpon>AccountsSubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitSubMenuForm.resx">
+      <DependentUpon>ExitSubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventorySubMenuForm.resx">
+      <DependentUpon>InventorySubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSalesForm.resx">
+      <DependentUpon>PointOfSalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurhcaseSubMenuForm.resx">
+      <DependentUpon>PurhcaseSubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsSubMenuForm.resx">
+      <DependentUpon>ReportsSubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesSubMenuForm.resx">
+      <DependentUpon>SalesSubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconCart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-black-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RetailPrototypeLibrary\RetailPrototypeLibrary.csproj">
+      <Project>{4ab64878-fca4-430e-9fff-5934f0f67690}</Project>
+      <Name>RetailPrototypeLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addressBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cartPlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_chartArea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_chartBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_chartPie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cogs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_corssBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_crossX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_exclamationCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_exclamationTriangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_idCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_shoppingBag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_signOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_userPlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_wrench.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
