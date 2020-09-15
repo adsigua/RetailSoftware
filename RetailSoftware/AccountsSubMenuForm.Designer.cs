@@ -73,8 +73,7 @@
             this.btnCreditMemo.Text = "Credit Memo";
             this.btnCreditMemo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCreditMemo.UseVisualStyleBackColor = false;
-            this.btnCreditMemo.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnCreditMemo.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnCreditMemo.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnCustomer
             // 
@@ -95,8 +94,7 @@
             this.btnCustomer.Text = "Customers";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnCustomer.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnCustomer.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnEmployee
             // 
@@ -117,8 +115,7 @@
             this.btnEmployee.Text = "Employees";
             this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployee.UseVisualStyleBackColor = false;
-            this.btnEmployee.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnEmployee.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnEmployee.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // AccountsSubMenuForm
             // 
@@ -130,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AccountsSubMenuForm";
             this.Text = "AccountsSubMenuForm";
+            this.Resize += new System.EventHandler(this.SubMenu_Resize);
             this.tblpSubFormAccounts.ResumeLayout(false);
             this.tblpSubFormAccounts.PerformLayout();
             this.ResumeLayout(false);

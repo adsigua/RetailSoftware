@@ -53,7 +53,6 @@
             this.tblpSubFormPurchase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tblpSubFormPurchase.Size = new System.Drawing.Size(194, 81);
             this.tblpSubFormPurchase.TabIndex = 16;
-            this.tblpSubFormPurchase.Resize += new System.EventHandler(this.tblpSubFormPurchase_Resize);
             // 
             // btnExpenses
             // 
@@ -74,7 +73,7 @@
             this.btnExpenses.Text = "Expenses";
             this.btnExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExpenses.UseVisualStyleBackColor = false;
-            this.btnExpenses.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnExpenses.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnSuppliers
             // 
@@ -95,7 +94,7 @@
             this.btnSuppliers.Text = "Suppliers";
             this.btnSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSuppliers.UseVisualStyleBackColor = false;
-            this.btnSuppliers.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnSuppliers.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnPurchaseHistory
             // 
@@ -116,7 +115,7 @@
             this.btnPurchaseHistory.Text = "Purchase History";
             this.btnPurchaseHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPurchaseHistory.UseVisualStyleBackColor = false;
-            this.btnPurchaseHistory.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnPurchaseHistory.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // PurhcaseSubMenuForm
             // 
@@ -128,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PurhcaseSubMenuForm";
             this.Text = "PurhcaseSubMenuForm";
+            this.Resize += new System.EventHandler(this.SubMenu_Resize);
             this.tblpSubFormPurchase.ResumeLayout(false);
             this.tblpSubFormPurchase.PerformLayout();
             this.ResumeLayout(false);

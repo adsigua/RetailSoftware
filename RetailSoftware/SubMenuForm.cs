@@ -12,9 +12,14 @@ using RetailPrototypeLibrary;
 
 namespace RetailSoftware
 {
-    public class SubMenu
+    public class SubMenuForm : Form
     {
-        public SubMenu(Control parentCtr,MainForm mf)
+
+        public SubMenuForm()
+        {
+        }
+
+        public SubMenuForm(Control parentCtr,MainForm mf)
         {
             mainForm = mf;
             subMenuButtons = ControlHandler.GetChildControls(parentCtr, typeof(CheckBox))
@@ -58,14 +63,15 @@ namespace RetailSoftware
 
         public void ResizeSubMenu()
         {
-            foreach(CheckBox subMenuBtn in subMenuButtons)
+            foreach (CheckBox subMenuBtn in subMenuButtons)
             {
-                float newFontSize = SizeControl.GetSizeByWidth(8,12,mainForm.ClientSize.Width);
-                foreach(CheckBox btn in subMenuButtons)
+                float newFontSize = SizeControl.GetSizeByWidth(8, 12, mainForm.ClientSize.Width);
+                foreach (CheckBox btn in subMenuButtons)
                 {
                     btn.Font = new Font("Segoe UI", newFontSize);
                 }
             }
         }
+
     }
 }

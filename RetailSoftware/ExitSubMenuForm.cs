@@ -11,30 +11,38 @@ using System.Xml.Serialization;
 
 namespace RetailSoftware
 {
-    public partial class ExitSubMenuForm : Form
+    public partial class ExitSubMenuForm : SubMenuForm
     {
-        private SubMenu subMenu;
         public ExitSubMenuForm()
         {
             InitializeComponent();
         }
-        public ExitSubMenuForm(MainForm mainForm)
+        public ExitSubMenuForm(MainForm mf)
         {
             InitializeComponent();
-            subMenu = new SubMenu(tblpSubFormExit, mainForm);
+
+            mainForm = mf;
+            subMenuButtons = ControlHandler.GetChildControls(tblpSubFormExit, typeof(CheckBox))
+                .Select(x => (CheckBox)x).ToList();
         }
-        private void subMenu_Clicked(object sender, EventArgs e)
+        private void SubMenu_Resize(object sender, EventArgs e)
         {
-            if( ((CheckBox)sender).Name== "btnExitProgram")
+            if (subMenuButtons != null)
             {
-                subMenu.mainForm.closeProgram();
+                ResizeSubMenu();
             }
-            subMenu.CheckSubMenu((CheckBox)sender);
         }
 
-        private void SubMenuForm_Resize(object sender, EventArgs e)
+        private void SubMenu_Clicked(object sender, EventArgs e)
         {
-            subMenu.ResizeSubMenu();
+            if (((CheckBox)sender).Name == "btnExitProgram")
+            {
+                mainForm.closeProgram();
+            }
+            else
+            {
+                CheckSubMenu((CheckBox)sender);
+            }
         }
     }
 }

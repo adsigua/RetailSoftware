@@ -107,7 +107,7 @@
     <Compile Include="SalesSubMenuForm.Designer.cs">
       <DependentUpon>SalesSubMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubMenu.cs" />
+    <Compile Include="SubMenuForm.cs" />
     <EmbeddedResource Include="AccountsSubMenuForm.resx">
       <DependentUpon>AccountsSubMenuForm.cs</DependentUpon>
     </EmbeddedResource>

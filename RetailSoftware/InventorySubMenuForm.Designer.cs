@@ -76,7 +76,7 @@
             this.btnProductReturn.Text = "Product Return";
             this.btnProductReturn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProductReturn.UseVisualStyleBackColor = false;
-            this.btnProductReturn.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnProductReturn.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnManageWarehouse
             // 
@@ -97,7 +97,7 @@
             this.btnManageWarehouse.Text = "Manage Warehouse";
             this.btnManageWarehouse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnManageWarehouse.UseVisualStyleBackColor = false;
-            this.btnManageWarehouse.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnManageWarehouse.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnProductInventory
             // 
@@ -118,7 +118,7 @@
             this.btnProductInventory.Text = "Product Inventory";
             this.btnProductInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProductInventory.UseVisualStyleBackColor = false;
-            this.btnProductInventory.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnProductInventory.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnProductList
             // 
@@ -139,7 +139,7 @@
             this.btnProductList.Text = "Product Master List";
             this.btnProductList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProductList.UseVisualStyleBackColor = false;
-            this.btnProductList.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnProductList.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // InventorySubMenuForm
             // 
@@ -151,7 +151,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InventorySubMenuForm";
             this.Text = "InventorySubMenu";
-            this.Resize += new System.EventHandler(this.InventorySubMenuForm_Resize);
+            this.Resize += new System.EventHandler(this.SubMenu_Resize);
             this.tblpSubFormInventory.ResumeLayout(false);
             this.tblpSubFormInventory.PerformLayout();
             this.ResumeLayout(false);

@@ -11,30 +11,33 @@ using RetailPrototypeLibrary;
 
 namespace RetailSoftware
 {
-    public partial class SalesSubMenuForm : Form
+    public partial class SalesSubMenuForm : SubMenuForm
     {
-
-        private SubMenu subMenu;
-
         public SalesSubMenuForm()
         {
             InitializeComponent();
         }
 
-        public SalesSubMenuForm(MainForm mainForm)
+        public SalesSubMenuForm(MainForm mf)
         {
-            subMenu = new SubMenu(tblpSubFormSales, mainForm);
             InitializeComponent();
-        }
-        
-        private void subMenu_Clicked(object sender, EventArgs e)
-        {
-            subMenu.CheckSubMenu((CheckBox)sender);
+
+            mainForm = mf;
+            subMenuButtons = ControlHandler.GetChildControls(tblpSubFormSales, typeof(CheckBox))
+                .Select(x => (CheckBox)x).ToList();
         }
 
-        private void SalesSubMenuForm_Resize(object sender, EventArgs e)
+        private void SubMenu_Resize(object sender, EventArgs e)
         {
-            subMenu.ResizeSubMenu();
+            if (subMenuButtons != null)
+            {
+                ResizeSubMenu();
+            }
         }
+        private void SubMenu_Clicked(object sender, EventArgs e)
+        {
+            CheckSubMenu((CheckBox)sender);
+        }
+
     }
 }

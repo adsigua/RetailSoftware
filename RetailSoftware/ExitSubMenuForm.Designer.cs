@@ -73,8 +73,7 @@
             this.btnExitProgram.Text = "Exit Program";
             this.btnExitProgram.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExitProgram.UseVisualStyleBackColor = false;
-            this.btnExitProgram.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnExitProgram.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnExitProgram.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnEndDay
             // 
@@ -95,8 +94,7 @@
             this.btnEndDay.Text = "End Day";
             this.btnEndDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEndDay.UseVisualStyleBackColor = false;
-            this.btnEndDay.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnEndDay.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnEndDay.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnLogOut
             // 
@@ -117,8 +115,7 @@
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnLogOut.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnLogOut.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // ExitSubMenuForm
             // 
@@ -130,6 +127,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ExitSubMenuForm";
             this.Text = "ExitSubMenuForm";
+            this.Resize += new System.EventHandler(this.SubMenu_Resize);
             this.tblpSubFormExit.ResumeLayout(false);
             this.tblpSubFormExit.PerformLayout();
             this.ResumeLayout(false);

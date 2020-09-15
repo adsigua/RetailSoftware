@@ -10,28 +10,33 @@ using System.Windows.Forms;
 
 namespace RetailSoftware
 {
-    public partial class InventorySubMenuForm : Form
+    public partial class InventorySubMenuForm : SubMenuForm
     {
-        private SubMenu subMenu;
         public InventorySubMenuForm()
         {
             InitializeComponent();
         }
 
-        public InventorySubMenuForm(MainForm mainForm)
+        public InventorySubMenuForm(MainForm mf)
         {
             InitializeComponent();
-            subMenu = new SubMenu(tblpSubFormInventory, mainForm);
+
+            mainForm = mf;
+            subMenuButtons = ControlHandler.GetChildControls(tblpSubFormInventory, typeof(CheckBox))
+                .Select(x => (CheckBox)x).ToList();
         }
 
-        private void subMenu_Clicked(object sender, EventArgs e)
+        private void SubMenu_Resize(object sender, EventArgs e)
         {
-            subMenu.CheckSubMenu((CheckBox)sender);
+            if (subMenuButtons != null)
+            {
+                ResizeSubMenu();
+            }
+        }
+        private void SubMenu_Clicked(object sender, EventArgs e)
+        {
+            CheckSubMenu((CheckBox)sender);
         }
 
-        private void InventorySubMenuForm_Resize(object sender, EventArgs e)
-        {
-            subMenu.ResizeSubMenu();
-        }
     }
 }

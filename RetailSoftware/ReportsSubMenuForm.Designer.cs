@@ -73,8 +73,7 @@
             this.btnPayments.Text = "Payments";
             this.btnPayments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPayments.UseVisualStyleBackColor = false;
-            this.btnPayments.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnPayments.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnPayments.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnReports
             // 
@@ -95,8 +94,7 @@
             this.btnReports.Text = "Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnReports.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnReports.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnChecksInventory
             // 
@@ -117,8 +115,7 @@
             this.btnChecksInventory.Text = "Checks Inventory";
             this.btnChecksInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnChecksInventory.UseVisualStyleBackColor = false;
-            this.btnChecksInventory.Click += new System.EventHandler(this.subMenu_Clicked);
-            this.btnChecksInventory.Resize += new System.EventHandler(this.SubMenuForm_Resize);
+            this.btnChecksInventory.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // ReportsSubMenuForm
             // 
@@ -132,6 +129,7 @@
             this.Text = "ReportsSubMenuForm";
             this.tblpSubFormReports.ResumeLayout(false);
             this.tblpSubFormReports.PerformLayout();
+            this.Resize += new System.EventHandler(this.SubMenu_Resize);
             this.ResumeLayout(false);
 
         }

@@ -73,7 +73,7 @@
             this.btnSubCashier.Text = "Cashier";
             this.btnSubCashier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSubCashier.UseVisualStyleBackColor = false;
-            this.btnSubCashier.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnSubCashier.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnSubInvoicing
             // 
@@ -94,7 +94,7 @@
             this.btnSubInvoicing.Text = "Invoicing";
             this.btnSubInvoicing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSubInvoicing.UseVisualStyleBackColor = false;
-            this.btnSubInvoicing.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnSubInvoicing.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // btnSubPOS
             // 
@@ -115,7 +115,7 @@
             this.btnSubPOS.Text = "Point of Sales";
             this.btnSubPOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSubPOS.UseVisualStyleBackColor = false;
-            this.btnSubPOS.Click += new System.EventHandler(this.subMenu_Clicked);
+            this.btnSubPOS.Click += new System.EventHandler(this.SubMenu_Clicked);
             // 
             // SalesSubMenuForm
             // 
@@ -128,7 +128,7 @@
             this.MinimumSize = new System.Drawing.Size(194, 74);
             this.Name = "SalesSubMenuForm";
             this.Text = "SalesDashBoardItemsForm";
-            this.Resize += new System.EventHandler(this.SalesSubMenuForm_Resize);
+            this.Resize += new System.EventHandler(this.SubMenu_Resize);
             this.tblpSubFormSales.ResumeLayout(false);
             this.tblpSubFormSales.PerformLayout();
             this.ResumeLayout(false);

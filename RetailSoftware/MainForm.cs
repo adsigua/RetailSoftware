@@ -24,17 +24,17 @@ namespace RetailSoftware
         private Form currentSubMenuForm;
         private CheckBox currentMenuSelected;
 
-        private List<CheckBox> dashBoardButtons = new List<CheckBox>();
+        private List<CheckBox> dashBoardButtons;
         private List<Form> subMenuForms;
 
         public MainForm()
         {
             InitializeComponent();
-            InitControls();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            InitControls();
             ResizeButtons();
             ShowLogin();
         }
@@ -56,15 +56,12 @@ namespace RetailSoftware
             }
         }
 
-        private void InitSubMenuForms()
-        {
-            subMenuForms = new List<Form>();
-            subMenuForms.Add(new SalesSubMenuForm(this));
-        }
-
         void MainForm_Resize(object sender, EventArgs e)
         {
-            ResizeButtons();
+            if (dashBoardButtons != null)
+            {
+                ResizeButtons();
+            }
         }
 
         /// <summary>
@@ -72,6 +69,7 @@ namespace RetailSoftware
         /// </summary>
         void ResizeWindow()
         {
+            //Size newWindowsSize =  new Size(this.ClientSize.Width, (int)newWindowHeight);
             float newWindowHeight = (this.ClientSize.Width * 1049) / 1920;
             this.ClientSize = new Size(this.ClientSize.Width, (int)newWindowHeight);
             Console.WriteLine(this.ClientSize);
